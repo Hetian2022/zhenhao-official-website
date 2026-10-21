@@ -1,0 +1,115 @@
+/* 卡片 */
+.animated-card {
+  width: 100%;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  animation: floatCard 10s ease-in-out infinite;
+}
+
+/* 顶部圆点 */
+.card-header {
+  display: flex;
+  gap: 6px;
+  padding: 14px 16px;
+}
+
+.card-header span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* 内容 */
+.card-body {
+  padding: 28px;
+}
+
+/* 模拟 UI 条 */
+.ui-line {
+  height: 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.18);
+  margin-bottom: 16px;
+}
+
+.ui-line.large {
+  height: 16px;
+  width: 70%;
+}
+
+.ui-line.small {
+  width: 40%;
+}
+
+/* 模拟模块 */
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.ui-grid div {
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@keyframes floatCard {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(2px, -3px) rotate(-0.4deg);
+  }
+  50% {
+    transform: translate(3px, -2px) rotate(0.3deg);
+  }
+  75% {
+    transform: translate(-2px, -3px) rotate(-0.2deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.chain-logos {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* 单个logo */
+.chain-logos img {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+  background: white;
+  padding: 4px;
+
+  border: 2px solid rgba(255, 255, 255, 0.6);
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  margin-left: -14px;
+}
+
+/* 第一个不叠 */
+.chain-logos img:first-child {
+  margin-left: 0;
+}
+
+/* hover 微动 */
+.chain-logos img:hover {
+  transform: translateY(-4px);
+}
